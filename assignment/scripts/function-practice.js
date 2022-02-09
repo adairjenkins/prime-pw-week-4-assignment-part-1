@@ -120,3 +120,22 @@ console.log('10. Test - should return "[]"', findPositiveNums([-4, -3, -10, 0]))
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//Create a n x n multiplication table, of size n provided in parameter
+
+function multiplicationTable(n) {
+  let table = [];
+
+  for (let i=0; i <= n; i++) {
+    table.push([]);
+    table[i].push( new Array(n));
+
+    for (let j=0; j <= n; j++) {
+      table [i][j] = (i * j);
+    }
+  }
+  return table;
+}
+
+console.log('11. Test 5 x 5 multiplication table')
+console.table(multiplicationTable(5));
